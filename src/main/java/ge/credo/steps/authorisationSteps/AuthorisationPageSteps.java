@@ -16,15 +16,14 @@ public class AuthorisationPageSteps extends CommonSteps<AuthorisationPage> {
 
     @Step("Enter username: {username}")
     public AuthorisationPageSteps enterUsername(String username) {
+        utils.waitForElement(authorisationPage.getUsernameField());
         utils.enterText(authorisationPage.getUsernameField(), username);
-        utils.clickOnEmptySpace();
         return this;
     }
 
     @Step("Enter password: {password}")
     public AuthorisationPageSteps enterPassword(String password) {
         utils.enterText(authorisationPage.getPasswordField(), password);
-        utils.clickOnEmptySpace();
         return this;
     }
 

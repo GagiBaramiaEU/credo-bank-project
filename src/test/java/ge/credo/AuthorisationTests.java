@@ -67,7 +67,7 @@ public class AuthorisationTests extends BaseTest {
                 .chooseLanguageAccordingProvidedLanguage(language)
                 .enterUsername("123")
                 .enterPassword(RandomStringUtils.randomAlphanumeric(10))
-                .clickOnLogin(7);
+                .clickOnLogin(8);
 
         softAssert.assertTrue(
                 authorisationPageSteps.validateErrorNotificationIsDisplayed(),

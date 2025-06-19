@@ -50,6 +50,7 @@ public class Utils {
     @Step("enter text: {element}, {text}")
     public void enterText(WebElement element, String text) {
         waitForElement(element);
+        waitForElementClickable(element);
         element.clear();
         element.sendKeys(text);
 

@@ -33,6 +33,7 @@ public class CommonSteps<T> {
     @Step("Click on close button of error notification")
     public T clickOnCloseButtonOnErrorNotification() {
         utils.jsClick(commons.getCloseButtonOnErrorNotificationContainer());
+        utils.waitForElementInvisible(commons.getErrorNotificationContainer());
         return (T) this;
     }
 
