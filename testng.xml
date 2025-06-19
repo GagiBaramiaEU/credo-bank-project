@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CredoAutomationTestSuite" parallel="tests" thread-count="2">
+
+    <test name="Chrome Authorisation Tests">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="AuthorisationsGroup"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="ge.credo.AuthorisationTests"/>
+        </classes>
+    </test>
+
+    <test name="Firefox Authorisation Tests">
+        <parameter name="browser" value="firefox"/>
+        <groups>
+            <run>
+                <include name="AuthorisationsGroup"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="ge.credo.AuthorisationTests"/>
+        </classes>
+    </test>
+
+</suite>
